@@ -1,4 +1,7 @@
 from modelo.menu import Menu
+from modelo.usuario import Usuario
 
 m = Menu()
-m.menu()
+
+u = Usuario('Pepe',12,12000)
+m.menu(u)

@@ -1,10 +1,7 @@
-from modelo.usuario import Usuario
-
 
 class Menu:
 
-    def menu(self):
-        u = Usuario('Pepe',12,12000)
+    def menu(self,u):
         while True:
             print('--------------  Gestor financiero  ----------------')
             print('1. Agreagar saldo')
