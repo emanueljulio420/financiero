@@ -4,7 +4,7 @@ class Menu:
     def menu(self,u):
         while True:
             print('--------------  Gestor financiero  ----------------')
-            print('1. Agreagar saldo')
+            print('1. Agregar saldo')
             print('2. Ver deudas')
             print('3. Agregar deuda')
             print('4. Pagar deuda')

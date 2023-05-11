@@ -19,6 +19,7 @@ class Usuario:
         saldo = float(input('Ingrese saldo a agregar: '))
         self.saldo = self.saldo + saldo
         new_transaccion = Transaccion(len(self.transacciones) + 1, datetime.datetime.now().date(), saldo, 'Ingresos')
+        self.transacciones.append(new_transaccion)
         print('Saldo agregado correctamente')
         print('\n')
 
@@ -66,7 +67,7 @@ class Usuario:
         print('\n')
         valor = int(input("Ingrese el valor del servicio: "))
         nombre = input("Ingrese el nombre del servicio: ")
-        new_servicio = Servicio(valor, nombre)
+        new_servicio = Servicio(valor, nombre, len(self.servicios) + 1)
         self.servicios.append(new_servicio)
         print("Servicio agregado con éxito!!!!")
         print('\n')

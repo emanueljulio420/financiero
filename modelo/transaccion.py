@@ -6,4 +6,4 @@ class Transaccion:
         self.descripcion = descripcion
 
     def __str__(self):
-        return f"Fecha {self.fecha}\n Valor {self.valor}\n Descripcion{self.descripcion}\n"
+        return f"Fecha: {self.fecha}\nValor: {self.valor}\nDescripcion: {self.descripcion}\n"

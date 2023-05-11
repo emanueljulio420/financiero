@@ -7,4 +7,4 @@ class Deuda:
         self.interes = interes
 
     def __str__(self):
-        return f"Numero de la deuda {self.id}\nValor de la deuda es de {self.valor} \nfecha de inicio {self.fecha_inicio}\nInteres del {self.interes} \nDescripcion {self.descripcion}\n"
+        return f"ID: {self.id}\nValor: {self.valor} \nFecha: {self.fecha_inicio}\nInteres: {self.interes} \nDescripcion: {self.descripcion}\n"
