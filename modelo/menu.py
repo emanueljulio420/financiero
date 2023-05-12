@@ -1,5 +1,7 @@
+from modelo.financieraExeption import FincancieraExeption
 
 class Menu:
+
 
     def menu(self,u):
         while True:
@@ -12,28 +14,49 @@ class Menu:
             print('6. Agregar servicio')
             print('7. Pagar servicio')
             print('8. Ver transacciones')
-            opc = int(input('Ingrese la accion que desea realizar: '))
+            print('9. Ver saldo')
+            print('10. Salir')
 
-            if (opc == 1):
-                u.agreagarSaldo()
+            try:
+                opc =int(input('Ingrese la accion que desea realizar: '))
 
-            if (opc == 2):
-                u.verDeudas()
+                if (opc == 1):
+                    u.agreagarSaldo()
 
-            if (opc == 3):
-                u.agregar_deuda()
+                if (opc == 2):
+                    u.verDeudas()
 
-            if (opc == 4):
-                u.pagar_deuda()
+                if (opc == 3):
+                    u.agregar_deuda()
 
-            if (opc == 5):
-                u.verServicios()
+                if (opc == 4):
+                    u.pagar_deuda()
 
-            if (opc == 6):
-                u.agregar_servicio()
+                if (opc == 5):
+                    u.verServicios()
 
-            if (opc == 7):
-                u.pagar_servicio()
+                if (opc == 6):
+                    u.agregar_servicio()
 
-            if (opc == 8):
-                u.verTransacciones()
+                if (opc == 7):
+                    u.pagar_servicio()
+
+                if (opc == 8):
+                    u.verTransacciones()
+                if (opc == 9):
+                    u.verSaldo()
+                if (opc == 10):
+                    print("Fue un placer atenderte espero que vuelvas pronto!")
+                    break
+
+                if (opc > 10 or opc <1):
+                    raise FincancieraExeption("\nEsta opcion no es valida en este menu\n")
+
+            except FincancieraExeption as e:
+                print("Error", e.mensaje)
+
+            except ValueError:
+                print("\nError: Se esperaba un número entero se redireccionara al menu principal.\n")
+
+
+
